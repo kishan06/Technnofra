@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:technofra/Utils/Helpers/colors.dart';
 
-class CustomInvestNowButton extends StatelessWidget {
-  const CustomInvestNowButton({
-    Key? key,
-    GlobalKey<FormState>? form,
+class CustomButton extends StatelessWidget {
+  // ignore: prefer_const_constructors_in_immutables
+  CustomButton({
+    super.key,
     this.ontap,
     required this.text,
     this.colorchange = false,
     this.productid,
-  }) : super(key: key);
+  });
 
   final bool colorchange;
   final GestureTapCallback? ontap;
@@ -21,22 +21,18 @@ class CustomInvestNowButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 50.h,
+      height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           elevation: 5,
-          shadowColor: Color.fromARGB(255, 220, 220, 226),
-
+          shadowColor: const Color.fromARGB(255, 220, 220, 226),
           backgroundColor: AppColors.primary,
-
-          //  color: Color(0xFFFFB600),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.h),
           ),
         ),
         onPressed: () {
           ontap!();
-          // productid;
         },
         child: Text(
           text,

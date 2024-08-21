@@ -63,7 +63,10 @@ flutter:
     - assets/images/png/BottomBar/
     - assets/images/png/sidemenu/
     - assets/images/svg/
+    - assets/images/jpg/
   fonts:
     - family: Inter
       fonts:
         - asset: assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf
+        - asset: assets/fonts/Inter/static/Inter_24pt-Bold.ttf
+          weight: 700 # Bold weight
